@@ -10,9 +10,15 @@
 
 Every bot in the sidebar is a real agent running on your own machine, with its own personality, its own model, its own computer and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters.
 
-## Download
+## Install
 
-Grab the latest build from [Releases](https://github.com/jtlgrowth/corpi/releases/latest).
+On a Mac, paste this in Terminal:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/jtlgrowth/corpi/main/install.sh | sh
+```
+
+It fetches the right build for your chip, puts Corpi in Applications and opens it. Prefer to do it by hand? Grab the file from [Releases](https://github.com/jtlgrowth/corpi/releases/latest).
 
 | Platform | File | Install |
 |---|---|---|
