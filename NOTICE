@@ -1,3 +1,10 @@
+Corpi
+Copyright 2026 JTL Growth
+
+Corpi is a fork of OpenMausBot (https://github.com/milind-soni/OpenMausBot),
+used under the Apache License, Version 2.0. Changes: product name, icon,
+release channel, analytics removed, default team pack. Upstream notice follows.
+
 OpenMausBot
 Copyright 2026 Milind Soni and OpenMausBot contributors
 

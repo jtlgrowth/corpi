@@ -1,16 +1,16 @@
 {
-  "name": "openmausbot",
+  "name": "corpi",
   "private": true,
   "version": "0.1.80",
-  "description": "A local-first chat app for running a team of AI agents.",
-  "homepage": "https://github.com/milind-soni/OpenMausBot",
+  "description": "Corpi: your own team of AI bots in a chat app. A JTL Growth fork of OpenMausBot.",
+  "homepage": "https://github.com/jtlgrowth/corpi",
   "repository": {
     "type": "git",
-    "url": "https://github.com/milind-soni/OpenMausBot.git"
+    "url": "https://github.com/jtlgrowth/corpi.git"
   },
   "author": {
-    "name": "Milind Soni",
-    "email": "46266943+milind-soni@users.noreply.github.com"
+    "name": "JTL Growth",
+    "email": "jamzjamorol03@gmail.com"
   },
   "license": "Apache-2.0",
   "desktopName": "com.openmausbot.app.desktop",

@@ -7,7 +7,9 @@
 // identify(), so PostHog's Persons tab doubles as the collected-email list.
 import posthog from "posthog-js";
 
-const TOKEN = "phc_m2hP39w8y2gLPvHgDvSXAu6xcZ3agjf4ruL56rGcMZEe";
+// Corpi fork: no analytics key. Upstream shipped its own PostHog key; a fork
+// must not report into it. Empty token = analytics never initialise.
+const TOKEN = "";
 
 // Analytics are on by default; Settings → General turns them off. The choice
 // lives in localStorage because it has to be readable BEFORE init() runs: an
@@ -68,6 +70,7 @@ export function setAnalyticsEnabled(enabled: boolean) {
 }
 
 export function initAnalytics() {
+  if (!TOKEN) return; // Corpi fork: no analytics key, never start the client
   if (ready || !analyticsEnabled()) return;
   posthog.init(TOKEN, {
     api_host: "https://us.i.posthog.com",
