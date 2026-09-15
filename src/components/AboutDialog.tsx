@@ -13,6 +13,7 @@ import {
   openExternalLink,
   platformLabel,
 } from "@/lib/app-links";
+import { JtlMark } from "@/components/JtlMark";
 
 export function AboutDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -52,6 +53,9 @@ export function AboutDialog({ open, onClose }: { open: boolean; onClose: () => v
         <p className="mt-1 text-[13px] text-ink-secondary">
           Version {appVersion()}
           {platform ? ` · ${platform}` : ""}
+        </p>
+        <p className="mt-2 flex items-center justify-center gap-1.5 text-[12px] text-ink-secondary">
+          <JtlMark className="h-3.5 w-auto text-ink opacity-70" /> by JTL Growth
         </p>
         <p className="mt-3 text-[13px] leading-relaxed text-ink-secondary">
           An open-source desktop home for your agents. Apache 2.0 licensed.

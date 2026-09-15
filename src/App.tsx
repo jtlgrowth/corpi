@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Loader2, Menu } from "lucide-react";
 import { StoreProvider, useStore } from "@/state/store";
 import { WelcomeFlow } from "@/components/onboarding/WelcomeFlow";
+import { JtlMark } from "@/components/JtlMark";
 import { FirstConversationTour } from "@/components/onboarding/FirstConversationTour";
 import { GuidedTour } from "@/components/onboarding/GuidedTour";
 import { welcomeDue } from "@/lib/onboarding";
@@ -233,6 +234,8 @@ function Shell() {
       {/* fixed-position popup, bottom-left — outside the layout flow */}
       <UpdateBanner />
       <div className="relative flex min-h-0 flex-1">
+      {/* JTL Growth mark: currentColor via text-ink, so it reads light on dark skins and black on light ones */}
+      <JtlMark className="pointer-events-none absolute bottom-3 right-3 z-10 h-5 w-auto text-ink opacity-20" />
       {!calendarFocus && <button
         type="button"
         ref={menuButtonRef}
@@ -276,6 +279,7 @@ function Shell() {
         <ChatView bot={bot} />
       ) : (
         <main className="flex h-full min-w-0 flex-1 flex-col items-center justify-center gap-3 bg-app text-ink-secondary">
+          <JtlMark className="h-10 w-auto text-ink opacity-40" />
           <Loader2 size={20} className="animate-spin" />
           <div className="text-[14px]">
             {state.connected ? "No bots yet" : "Connecting to the bot server…"}
