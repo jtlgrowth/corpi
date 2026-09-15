@@ -1,4 +1,5 @@
 import { Component, memo, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { JtlMark } from "@/components/JtlMark";
 import {
   AlertTriangle,
   ArrowDown,
@@ -1123,7 +1124,10 @@ export function ChatView({ bot: profile }: { bot: Bot }) {
   const canOpenResults = resultsThreadId && [...state.bots, ...state.groups].some((owner) => owner.threadId === resultsThreadId || owner.tasks?.some((task) => task.threadId === resultsThreadId));
 
   return (
-    <main className="relative flex h-full min-w-0 flex-1 flex-col bg-app">
+    <main className="relative isolate flex h-full min-w-0 flex-1 flex-col bg-app">
+      {/* JTL Growth mark behind the thread: -z-10 inside the isolated main paints it above the
+          background and under every message; text-ink keeps it light on dark skins, black on light */}
+      <JtlMark className="pointer-events-none absolute inset-0 -z-10 m-auto h-[36%] w-auto max-w-[55%] text-ink opacity-[0.07]" />
       {/* Call mode covers the thread while the bot is on the line */}
       <CallOverlay bot={bot} />
       {/* Header */}

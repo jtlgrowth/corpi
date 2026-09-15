@@ -234,8 +234,6 @@ function Shell() {
       {/* fixed-position popup, bottom-left — outside the layout flow */}
       <UpdateBanner />
       <div className="relative flex min-h-0 flex-1">
-      {/* JTL Growth mark: currentColor via text-ink, so it reads light on dark skins and black on light ones */}
-      <JtlMark className="pointer-events-none absolute bottom-3 right-3 z-10 h-5 w-auto text-ink opacity-20" />
       {!calendarFocus && <button
         type="button"
         ref={menuButtonRef}

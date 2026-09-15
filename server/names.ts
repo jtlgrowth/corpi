@@ -1,16 +1,13 @@
 // Bot name generator — a curated local list beats a naming API: instant,
-// offline, and every name is on-brand (short, friendly, a little pet-like,
-// which suits the Maus). Picks avoid names already in use; when the pool is
+// offline, and every name is on-brand for Corpi (short, friendly, the kind of
+// first name you would call across a Manila office). Picks avoid names already in use; when the pool is
 // exhausted it falls back to "Name 2", "Name 3", …
 const NAMES = [
-  "Scout", "Pixel", "Atlas", "Nova", "Juno", "Koda", "Miso", "Mochi",
-  "Biscuit", "Pepper", "Clover", "Ember", "Willow", "Comet", "Orbit", "Echo",
-  "Indigo", "Sage", "Zephyr", "Poppy", "Maple", "Cosmo", "Luna", "Otto",
-  "Ivy", "Finch", "Wren", "Basil", "Hazel", "Nimbus", "Onyx", "Pearl",
-  "Quill", "Rocket", "Sunny", "Tango", "Vega", "Waffle", "Ziggy", "Noodle",
-  "Pickle", "Churro", "Panko", "Dumpling", "Pesto", "Olive", "Cocoa", "Taffy",
-  "Bramble", "Fig", "Juniper", "Moss", "Pebble", "Rio", "Skye", "Tuli",
-  "Ursa", "Yuki", "Zuko", "Momo", "Kiwi", "Plum", "Sprout", "Turnip",
+  "Ria", "Ben", "Marco", "Cielo", "Tin", "Jun", "Lala", "Dre",
+  "Nica", "Paolo", "Bea", "Migs", "Kai", "Dani", "Lio", "Maya",
+  "Teo", "Ana", "Rafa", "Nina", "Gab", "Iya", "Zed", "Coco",
+  "Ivy", "Sol", "Ely", "Pia", "Tomas", "Lena", "Jomar", "Aya",
+  "Nash", "Vito", "Cris", "Mara", "Dino", "Yen", "Lou", "Ces",
 ];
 
 export function pickBotName(taken: Iterable<string>): string {
